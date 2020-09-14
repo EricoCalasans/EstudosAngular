@@ -17,11 +17,16 @@ export class AlexBabacaComponent implements OnInit {
   }
 
   verificar() {
-    console.log(this.nome);
-    if (this.nome == "alex") {
-      this.texto = 'vai tomar no cu'
+    console.log(this.nome.length);
+    if (this.nome.length == 0) {
+      this.texto = 'digite um nome'
     } else {
-      this.texto = "seja bem vindo"
+
+      if (this.nome == "alex") {
+        this.texto = 'vai tomar no cu'
+      } else {
+        this.texto = "seja bem vindo"
+      }
     }
     this.exibirTexto = true;
   }
